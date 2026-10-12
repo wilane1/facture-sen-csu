@@ -1166,7 +1166,7 @@ function genererPDF(){
         var html='<p style="font-size:13px;color:var(--green);margin-bottom:10px">✅ '+
           filesB64.length+' fichiers générés. Touchez pour télécharger :</p>';
         filesB64.forEach(function(f,i){
-          var libelle=/PAGE_DE_GARDE/i.test(f.filename)?"📄 Page de garde (portrait)"
+          var libelle=/PAGE_DE_GARDE/i.test(f.filename)?"📄 Facture (portrait)"
                      :/LISTE/i.test(f.filename)?"📋 Liste nominative (paysage)":"📎 "+f.filename;
           html+='<button class="btn" style="margin-bottom:8px" onclick="telechargerPdfIndex('+i+')">'+libelle+'</button>';
         });
